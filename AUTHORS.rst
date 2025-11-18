@@ -2,8 +2,6 @@
    SPDX-License-Identifier: AGPL-3.0-or-later
 
    ----------------------------------------------------------------------
-   Copyright © 2024, 2025
-               Jiang Jie
    Copyright © 2025
                Pellegrino Prevete
 
@@ -24,10 +22,9 @@
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-=====================================
-Happy OPFS Authors
-=====================================
+==========================================================
+The Martian Company Javascript File System module Authors
+==========================================================
 
-* Jiang Jie <jiang115jie@gmail.com>
 * Pellegrino Prevete <pellegrinoprevete@gmail.com>
 * Truocolo <truocolo@aol.com>

@@ -19,38 +19,32 @@
 [comment]: <> (License along with this program.)
 [comment]: <> (If not, see <https://www.gnu.org/licenses/>.)
 
-# OPFS Module (`@themartiancompany/opfs`)
+# The Martian Company's Javascript File System Module (`@themartiancompany/fs`)
 
 [![NPM version](
-  https://img.shields.io/npm/v/@themartiancompany/opfs.svg)](
-    https://npmjs.org/package/@themartiancompany/opfs)
+  https://img.shields.io/npm/v/@themartiancompany/fs.svg)](
+    https://npmjs.org/package/@themartiancompany/fs)
 
-Browser-compatible `fs` module obtained combining the
-[Happy OPFS](
-  https://github.com/themartiancompany/happy-opfs)
-and the
-[OPFS Tools](
-  https://github.com/hughfenghen/opfs-tools)
-modules.
-
-OPFS stands for *origin private file system* 
-and it is a file system API for manipulating local
-files in a browser environment.
+Platform-independent Javascript File System `fs` module,
+which dynamically loads either the platform's native
+`fs` module or the
+[Origin Private File System](
+  https://github.com/themartiancompany/opfs)
+(OPFS) module.
 
 ## Installation
 
-To install a locally built version of the
-library run
+To build the Node module package from source run
 
 ```bash
 $ make \
     all
 ```
 
-An `opfs-<version>.tgz` npm archive will be generated
-in the root of the repository.
+A `thmartiancompany-fs-<version>.tgz` archive
+will be generated in the root of the repository.
 
-To install the library system-wide run
+To install the module system-wide run
 
 ```bash
 # make \
@@ -68,7 +62,7 @@ store run
 
 ```bash
 ur \
-  "nodejs-opfs"
+  "nodejs-fs"
 ```
 
 A mirror of the Ur universal recipe
