@@ -50,8 +50,7 @@ NPM_FILES=\
   "COPYING" \
   "AUTHORS.rst" \
   "eslint.config.mjs" \
-  "fs" 
-  "$(_PROJECT)" \
+  "fs" \
   "package.json"
 SCRIPT_FILES=\
   $(wildcard \
@@ -87,12 +86,7 @@ build-npm:
 	  -p \
 	  "build/man"; \
 	_files=( \
-	  "README.md" \
-	  "COPYING" \
-	  "AUTHORS.rst" \
-	  "eslint.config.mjs" \
-	  "$(_PROJECT)" \
-	  "package.json" \
+	  $(NPM_FILES) \
 	) ; \
 	mkdir \
 	  -p \
