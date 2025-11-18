@@ -48,7 +48,7 @@
   "source":
     "fs",
   "man":
-    "man/tmcfs.1",
+    "./man/tmcfs.1",
   "main":
     "fs",
   "module":

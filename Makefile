@@ -21,7 +21,7 @@
 
 PREFIX ?= /usr/local
 _NAMESPACE=themartiancompany
-_PROJECT=opfs
+_PROJECT=tmcfs
 DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/$(_PROJECT)
 USR_DIR=$(DESTDIR)$(PREFIX)
 BIN_DIR=$(DESTDIR)$(PREFIX)/bin
@@ -45,6 +45,14 @@ DOC_FILES=\
       *.rst) \
   $(wildcard \
       *.md)
+NPM_FILES=\
+  "README.md" \
+  "COPYING" \
+  "AUTHORS.rst" \
+  "eslint.config.mjs" \
+  "fs" 
+  "$(_PROJECT)" \
+  "package.json"
 SCRIPT_FILES=\
   $(wildcard \
       $(_PROJECT)/*)

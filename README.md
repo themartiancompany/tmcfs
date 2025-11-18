@@ -92,7 +92,14 @@ refer to the
 [File System API](
   https://nodejs.org/api/fs.html).
 
-### Javascript
+Usage manual is located in `man` in reStructured
+text format and can be accessed upon module
+installation with
+
+```bash
+man \
+  "tmcfs"
+```
 
 If you are looking for an example of how
 to write a full computer application
