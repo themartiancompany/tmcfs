@@ -47,8 +47,8 @@ function
           "'opfs' module is listed in developer " +
           "dependencies and install them." +
           "I'm sorry for this inconvenience but " +
-          "Node packagement system does not currently",
-          "distinguish 'development' from 'build'",
+          "Node packagement system does not currently " +
+          "distinguish 'development' from 'build' " +
           "dependencies.";
       console.error(
         _msg);

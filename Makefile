@@ -116,7 +116,7 @@ build-npm:
 	npm \
 	  pack; \
 	mv \
-	  "$(_NAMESPACE)-$(_PROJECT)-$${_version}.tgz" \
+	  "$(_NAMESPACE)-fs-$${_version}.tgz" \
 	  ".."
 
 install-npm:
@@ -134,7 +134,7 @@ install-npm:
 	npm \
 	  install \
 	    "$${_npm_opts[@]}" \
-	    "$(_NAMESPACE)-$(_PROJECT)-$${_version}.tgz"; \
+	    "$(_NAMESPACE)-fs-$${_version}.tgz"; \
 	$(_INSTALL_DIR) \
 	  "$(DESTDIR)$(PREFIX)/lib"; \
 	ln \
