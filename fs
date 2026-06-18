@@ -68,6 +68,8 @@ function
       _fs =
         require(
           "fs");
+      _fs.fsWorkerStart =
+        _fs_worker_start_get();
     }
     else {
       _fs =
@@ -94,6 +96,8 @@ function
       _fs =
         require(
           "fs");
+      _fs.fsWorkerStart =
+        _fs_worker_start_get();
     }
     else {
       const
@@ -138,5 +142,3 @@ module.exports =
   _fs;
 module.exports.getModule =
   _fs_module_get;
-module.exports._fs_worker_start =
-  _fs_worker_start_get();
