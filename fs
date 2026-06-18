@@ -30,7 +30,8 @@ function
       _fs;
     try {
       _fs =
-        require("opfs");
+        require(
+          "opfs");
     }
     catch(
       _error) {
@@ -87,8 +88,7 @@ function
     }
     else if ( _module_name == 'opfs' ) {
       _fs =
-        require(
-          "opfs");
+        _opfs_module_auto_detect();
     }
     else if ( _module_name == 'fs' ) {
       _fs =
