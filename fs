@@ -115,7 +115,28 @@ const
   _fs =
     _fs_module_auto_detect();
 
+function
+  _fs_worker_start_get() {
+  let
+    _fs_worker_start_fun;
+  _fs_worker_start_fun =
+    _fs._fs_worker_start;
+  const
+    _fs_worker_start_fun_type =
+      typeof(
+        _fs_worker_start_fun);
+  if ( _fs_worker_start_fun_type == "undefined" ) {
+    _fs_worker_start_fun =
+      function () {
+        true;
+      };
+  }
+  return _fs_worker_start_fun;
+}
+
 module.exports =
   _fs;
 module.exports.getModule =
   _fs_module_get;
+module.exports._fs_worker_start =
+  _fs_worker_start_get();
