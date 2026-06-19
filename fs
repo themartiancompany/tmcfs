@@ -67,9 +67,11 @@ function
          typeof __webpack_require__ !== 'function' ) {
       _fs =
         require(
-          "fs");
-      _fs.fsWorkerStart =
-        _fs_worker_start_get();
+          "node:fs");
+      _fs[
+        "fsWorkerStart"] =
+        _fs_worker_start_get(
+          _fs);
     }
     else {
       _fs =
@@ -95,9 +97,11 @@ function
     else if ( _module_name == 'fs' ) {
       _fs =
         require(
-          "fs");
-      _fs.fsWorkerStart =
-        _fs_worker_start_get();
+          "node:fs");
+      _fs[
+        "fsWorkerStart"] =
+        _fs_worker_start_get(
+          _fs);
     }
     else {
       const
@@ -120,11 +124,12 @@ const
     _fs_module_auto_detect();
 
 function
-  _fs_worker_start_get() {
+  _fs_worker_start_get(
+    _fs_module) {
   let
     _fs_worker_start_fun;
   _fs_worker_start_fun =
-    _fs._fs_worker_start;
+    _fs_module.fsWorkerStart;
   const
     _fs_worker_start_fun_type =
       typeof(
