@@ -1,3 +1,28 @@
+/**    ----------------------------------------------------------------
+ *     webpack.config.cjs
+ *     ----------------------------------------------------------------
+ *     Copyright ©
+ *       Pellegrino Prevete
+ *         2024, 2025, 2026
+ * 
+ *     All rights reserved
+ *     ----------------------------------------------------------------
+ * 
+ *     This program is free software: you can redistribute it and/or
+ *     modify it under the terms of the GNU General Public License as
+ *     published by the Free Software Foundation, either version 3 of
+ *     the License, or (at your option) any later version.
+ * 
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ * 
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.
+ *     If not, see <https://www.gnu.org/licenses/>.
+ */
+
 const
   _path =
     require(
@@ -15,14 +40,14 @@ const
 const
   _input_file_path =
     `./${_input_file_name}/${_input_file_name}`;
-const
-  _fs_ignore =
-  { resourceRegExp:
-      /^fs$/ };
-const
-  _node_fs_ignore =
-  { resourceRegExp:
-      /^node\:fs$/ };
+// const
+//   _fs_ignore =
+//   { resourceRegExp:
+//       /^\.fs$/ };
+// const
+//   _node_fs_ignore =
+//   { resourceRegExp:
+//       /^node:fs$/ };
 const
   _yargs_ignore =
   { resourceRegExp:
@@ -39,14 +64,14 @@ const
 const
   _ignore_plugin =
     _webpack.IgnorePlugin; 
-const
-  _fs_ignore_plugin =
-    new _ignore_plugin(
-          _fs_ignore);
-const
-  _node_fs_ignore_plugin =
-    new _ignore_plugin(
-          _node_fs_ignore);
+// const
+//   _fs_ignore_plugin =
+//     new _ignore_plugin(
+//           _fs_ignore);
+// const
+//   _node_fs_ignore_plugin =
+//     new _ignore_plugin(
+//           _node_fs_ignore);
 const
   _yargs_ignore_plugin =
     new _ignore_plugin(

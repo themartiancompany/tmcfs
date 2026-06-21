@@ -40,7 +40,7 @@
     "unzip"
   ],
   "type":
-    "module",
+    "commonjs",
   "files": [
     "COPYING",
     "AUTHORS.md",
@@ -57,8 +57,6 @@
   "man":
     "./man/tmcfs.1",
   "main":
-    "./fs",
-  "module":
     "fs",
   "sideEffects":
     false,
@@ -75,8 +73,6 @@
     "url": "git+https://github.com/themartiancompany/tmcfs.git"
   },
   "devDependencies": {
-    "crash-js-webpack":
-      "^0.0.31",
     "@eslint/js":
       "^10.0.1",
     "eslint":
@@ -87,6 +83,8 @@
       "npm:@themartiancompany/opfs@^2.0.10",
     "safely-serve":
       "^0.0.9",
+    "web-worker":
+      "^1.5.0",
     "webpack":
       "^5.102.1",
     "webpack-cli":
@@ -96,6 +94,10 @@
   },
   "optionalDependencies": {
     "opfs":
+      "npm:@themartiancompany/opfs@^2.0.10"
+  },
+  "override": {
+    "./fs":
       "npm:@themartiancompany/opfs@^2.0.10"
   },
   "scripts":
