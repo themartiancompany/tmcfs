@@ -52,7 +52,7 @@ NPM_FILES=\
   "dist" \
   "eslint.config.mjs" \
   "fs" \
-  "fs-worker.webpack.config.cjs"
+  "fs-worker.webpack.config.cjs" \
   "package.json" \
   "webpack.config.cjs"
 SCRIPT_FILES=\
