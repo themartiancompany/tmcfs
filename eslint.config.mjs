@@ -31,7 +31,7 @@ const
   _project =
     "fs";
 const
-  ignores = [
+  _ignores = [
     "build/**",
     "dist/**",
     "fs-worker.js",
