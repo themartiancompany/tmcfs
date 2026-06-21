@@ -22,7 +22,7 @@ const
 const
   _node_fs_ignore =
   { resourceRegExp:
-      /^node:fs$/ };
+      /^node\:fs$/ };
 const
   _yargs_ignore =
   { resourceRegExp:
@@ -71,6 +71,10 @@ module.exports = {
   },
   resolve: {
     alias: {
+      "node:fs":
+        _path.resolve(
+          __dirname,
+          'node_modules/opfs/opfs'),
       "fs":
         _path.resolve(
           __dirname,
@@ -85,20 +89,16 @@ module.exports = {
           'node_modules/web-worker/dist/browser/index.cjs'),
     },
     fallback: {
-      "node:fs":
-        false,
       "utils":
         false
     },
   },
   externals:
-    { fs:
-        "tmcfs",
-      yargs:
+    { yargs:
         'yargs' },
   plugins: [
-    _fs_ignore_plugin,
-    _node_fs_ignore_plugin,
+    // _fs_ignore_plugin,
+    // _node_fs_ignore_plugin,
     _yargs_ignore_plugin,
     _yargs_helpers_ignore_plugin
   ]

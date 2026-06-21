@@ -98,10 +98,6 @@
     "opfs":
       "npm:@themartiancompany/opfs@^2.0.10"
   },
-  "overrides": {
-    "fs":
-      "npm:@themartiancompany/fs@^0.0.13"
-  },
   "scripts":
     { "build":
         "npm run lint; npm run build-fs-worker; npm run build-lib",
