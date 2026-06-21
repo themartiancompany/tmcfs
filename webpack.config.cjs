@@ -16,6 +16,10 @@ const
   _input_file_path =
     `./${_input_file_name}/${_input_file_name}`;
 const
+  _fs_ignore =
+  { resourceRegExp:
+      /^fs$/ };
+const
   _node_fs_ignore =
   { resourceRegExp:
       /^node:fs$/ };
@@ -35,6 +39,10 @@ const
 const
   _ignore_plugin =
     _webpack.IgnorePlugin; 
+const
+  _fs_ignore_plugin =
+    new _ignore_plugin(
+          _fs_ignore);
 const
   _node_fs_ignore_plugin =
     new _ignore_plugin(
@@ -67,10 +75,6 @@ module.exports = {
         _path.resolve(
           __dirname,
           'node_modules/opfs/opfs'),
-      "fs":
-        _path.resolve(
-          __dirname,
-          'node_modules/opfs/opfs'),
       "path":
         _path.resolve(
           __dirname,
@@ -81,9 +85,9 @@ module.exports = {
           'node_modules/web-worker/dist/browser/index.cjs'),
     },
     fallback: {
-      "node:fs":
-        false,
       "fs":
+        false,
+      "node:fs":
         false,
       "utils":
         false
@@ -93,6 +97,7 @@ module.exports = {
     { yargs:
         'yargs' },
   plugins: [
+    _fs_ignore_plugin,
     _node_fs_ignore_plugin,
     _yargs_ignore_plugin,
     _yargs_helpers_ignore_plugin

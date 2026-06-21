@@ -115,14 +115,14 @@ build-npm:
 	npm \
 	  run \
 	    "build"; \
-	rm \
-	  -rf \
-	  "node_modules"; \
 	npm \
 	  pack; \
 	mv \
 	  "$(_NAMESPACE)-fs-$${_version}.tgz" \
 	  ".."
+	# rm \
+	#   -rf \
+	#   "build/node_modules";
 
 install-npm:
 
