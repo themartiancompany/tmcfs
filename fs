@@ -119,10 +119,6 @@ function
     return _fs;
 }
 
-const
-  _fs =
-    _fs_module_auto_detect();
-
 function
   _fs_worker_start_get(
     _fs_module) {
@@ -142,6 +138,38 @@ function
   }
   return _fs_worker_start_fun;
 }
+
+function
+  _is_dir_sync_get(
+    _fs_module,
+    _path) {
+  const
+    _is_dir_sync =
+      function(
+        _path) {
+        const
+          _file_info =
+            _fs_module.statSync(
+              _path);
+        const
+          _is_dir =
+            ! _file_info.isFile();
+        return _is_dir;
+      }
+  return _is_dir_sync;
+}
+
+const
+  _fs =
+    _fs_module_auto_detect();
+
+_fs[
+  "isDirSync"] =
+  _is_dir_sync_get();
+_fs[
+  "isDir"] =
+  _fs[
+    "isDirSync"];
 
 module.exports =
   _fs;
