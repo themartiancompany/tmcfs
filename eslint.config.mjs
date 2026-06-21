@@ -30,13 +30,16 @@ import { defineConfig } from "eslint/config";
 const
   _project =
     "fs";
-
+const
+  ignores = [
+    "build/**",
+    "dist/**",
+    "fs-worker.js",
+    "eslint.config.js"
+  ];
 export default defineConfig([
- { ignores: [
-     "build/**",
-     "dist/**",
-     "eslint.config.js"
-   ],
+ { ignores:
+     _ignores,
    rules:
      { semi:
          "error",
@@ -53,7 +56,9 @@ export default defineConfig([
      { globals:
          {  ...globals.browser,
             ...globals.node} } },
- { files:
+ { ignores:
+     _ignores,
+   files:
      [ "**/*.js",
        `${_project}/*` ],
    languageOptions:

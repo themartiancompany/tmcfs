@@ -59,6 +59,10 @@ module.exports = {
         _path.resolve(
           __dirname,
           'node_modules/path/mod.js'),
+      "web-worker":
+        _path.resolve(
+          __dirname,
+          'node_modules/web-worker/dist/browser/index.cjs'),
     },
   },
   plugins: [

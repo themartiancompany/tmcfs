@@ -75,6 +75,8 @@
     "url": "git+https://github.com/themartiancompany/tmcfs.git"
   },
   "devDependencies": {
+    "crash-js-webpack":
+      "^0.0.31",
     "@eslint/js":
       "^10.0.1",
     "eslint":
@@ -98,7 +100,7 @@
   },
   "overrides": {
     "fs":
-      "npm:@themartiancompany/tmcfs@^0.0.13"
+      "npm:@themartiancompany/fs@^0.0.13"
   },
   "scripts":
     { "build":

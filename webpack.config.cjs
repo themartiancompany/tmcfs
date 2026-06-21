@@ -71,6 +71,10 @@ module.exports = {
   },
   resolve: {
     alias: {
+      "fs":
+        _path.resolve(
+          __dirname,
+          'node_modules/opfs/opfs'),
       "path":
         _path.resolve(
           __dirname,
@@ -81,8 +85,6 @@ module.exports = {
           'node_modules/web-worker/dist/browser/index.cjs'),
     },
     fallback: {
-      "fs":
-        "tmcfs",
       "node:fs":
         false,
       "utils":
