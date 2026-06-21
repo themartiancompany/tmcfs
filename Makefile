@@ -52,7 +52,7 @@ NPM_FILES=\
   "dist" \
   "eslint.config.mjs" \
   "fs" \
-  "package.json"
+  "package.json" \
   "webpack.config.cjs"
 SCRIPT_FILES=\
   $(wildcard \
