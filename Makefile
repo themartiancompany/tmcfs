@@ -49,9 +49,11 @@ NPM_FILES=\
   "README.md" \
   "COPYING" \
   "AUTHORS.rst" \
+  "dist" \
   "eslint.config.mjs" \
   "fs" \
   "package.json"
+  "webpack.config.cjs"
 SCRIPT_FILES=\
   $(wildcard \
       $(_PROJECT)/*)
