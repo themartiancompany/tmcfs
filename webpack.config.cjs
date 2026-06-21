@@ -71,10 +71,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "node:fs":
-        _path.resolve(
-          __dirname,
-          'node_modules/opfs/opfs'),
       "path":
         _path.resolve(
           __dirname,
@@ -86,7 +82,7 @@ module.exports = {
     },
     fallback: {
       "fs":
-        false,
+        "tmcfs",
       "node:fs":
         false,
       "utils":
@@ -94,7 +90,9 @@ module.exports = {
     },
   },
   externals:
-    { yargs:
+    { fs:
+        "tmcfs",
+      yargs:
         'yargs' },
   plugins: [
     _fs_ignore_plugin,
