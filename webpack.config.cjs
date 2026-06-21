@@ -63,6 +63,14 @@ module.exports = {
   },
   resolve: {
     alias: {
+      "node:fs":
+        _path.resolve(
+          __dirname,
+          'node_modules/opfs/opfs'),
+      "fs":
+        _path.resolve(
+          __dirname,
+          'node_modules/opfs/opfs'),
       "path":
         _path.resolve(
           __dirname,
@@ -74,6 +82,8 @@ module.exports = {
     },
     fallback: {
       "node:fs":
+        false,
+      "fs":
         false,
       "utils":
         false

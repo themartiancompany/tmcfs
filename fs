@@ -82,7 +82,7 @@ function
 
 function
   _fs_module_get(
-    _module_type) {
+    _module_name) {
     let
       _fs;
     if ( _module_name == "" ||

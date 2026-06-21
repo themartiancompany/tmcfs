@@ -108,6 +108,9 @@ build-npm:
 	      "$${PWD}" \
 	      "version")"; \
         npm \
+	  install \
+	    --save-dev; \
+        npm \
 	  install; \
 	npm \
 	  run \

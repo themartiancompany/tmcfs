@@ -52,11 +52,11 @@
     "webpack.config.cjs"
   ],
   "source":
-    "fs",
+    "./fs",
   "man":
     "./man/tmcfs.1",
   "main":
-    "fs",
+    "./fs",
   "module":
     "fs",
   "sideEffects":
@@ -80,6 +80,8 @@
       "^10.3.0",
     "globals":
       "^17.3.0",
+    "opfs":
+      "npm:@themartiancompany/opfs@^2.0.10",
     "safely-serve":
       "^0.0.9",
     "webpack":
@@ -93,15 +95,11 @@
     "opfs":
       "npm:@themartiancompany/opfs@^2.0.10"
   },
-  "overrides": {
-    "fs":
-      "node:fs"
-  },
   "scripts":
     { "build":
         "npm run lint && npm run build-lib",
       "build-lib":
-        "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details && mkdir 'dist' && mv 'fs.js'* 'dist'",
+        "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details && mkdir 'dist' && mv 'fs.js' 'dist'",
       "lint":
         "npx eslint .",
       "start":
