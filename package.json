@@ -43,9 +43,13 @@
     "module",
   "files": [
     "COPYING",
+    "AUTHORS.md",
     "README.md",
+    "dist",
+    "eslint.config.mjs",
     "fs",
-    "package.json"
+    "package.json",
+    "webpack.config.cjs"
   ],
   "source":
     "fs",
@@ -75,7 +79,13 @@
     "eslint":
       "^10.3.0",
     "globals":
-      "^17.3.0"
+      "^17.3.0",
+    "safely-serve":
+      "^0.0.9",
+    "webpack":
+      "^5.102.1",
+    "webpack-cli":
+      "^6.0.1"
   },
   "dependencies": {
   },
@@ -86,5 +96,16 @@
   "overrides": {
     "fs":
       "node:fs"
-  }
+  },
+  "scripts":
+    { "build":
+        "npm run lint && npm run build-lib",
+      "build-lib":
+        "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details && mkdir 'dist' && mv 'fs.js'* 'dist'",
+      "lint":
+        "npx eslint .",
+      "start":
+        "npx safely-serve 'dist/fs'",
+      "test":
+        "echo \"Error: no test specified\" && exit 1" }
 }
