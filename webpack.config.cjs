@@ -99,7 +99,7 @@ module.exports = {
       "fs":
         _path.resolve(
           __dirname,
-          'fs'),
+          'node_modules/fs/fs'),
       "path":
         _path.resolve(
           __dirname,
@@ -110,6 +110,8 @@ module.exports = {
           'node_modules/web-worker/dist/browser/index.cjs'),
     },
     fallback: {
+      "node:fs":
+        false,
       "utils":
         false
     },
