@@ -141,8 +141,12 @@ function
 
 function
   _is_dir_sync_get(
-    _fs_module,
-    _path) {
+    _fs_module) {
+  if ( typeof(
+       _fs_module) === "undefined" ) {
+    _fs_module =
+      _fs_module_auto_detect();
+  }
   const
     _is_dir_sync =
       function(
@@ -165,7 +169,8 @@ const
 
 _fs[
   "isDirSync"] =
-  _is_dir_sync_get();
+  _is_dir_sync_get(
+    _fs);
 _fs[
   "isDir"] =
   _fs[

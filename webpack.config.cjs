@@ -44,10 +44,10 @@ const
 //   _fs_ignore =
 //   { resourceRegExp:
 //       /^\.fs$/ };
-// const
-//   _node_fs_ignore =
-//   { resourceRegExp:
-//       /^node:fs$/ };
+const
+  _node_fs_ignore =
+  { resourceRegExp:
+      /^node:fs$/ };
 const
   _yargs_ignore =
   { resourceRegExp:
@@ -68,10 +68,10 @@ const
 //   _fs_ignore_plugin =
 //     new _ignore_plugin(
 //           _fs_ignore);
-// const
-//   _node_fs_ignore_plugin =
-//     new _ignore_plugin(
-//           _node_fs_ignore);
+const
+  _node_fs_ignore_plugin =
+    new _ignore_plugin(
+          _node_fs_ignore);
 const
   _yargs_ignore_plugin =
     new _ignore_plugin(
@@ -96,14 +96,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "node:fs":
-        _path.resolve(
-          __dirname,
-          'node_modules/opfs/opfs'),
       "fs":
         _path.resolve(
           __dirname,
-          'node_modules/opfs/opfs'),
+          'fs'),
       "path":
         _path.resolve(
           __dirname,
@@ -123,7 +119,7 @@ module.exports = {
         'yargs' },
   plugins: [
     // _fs_ignore_plugin,
-    // _node_fs_ignore_plugin,
+    _node_fs_ignore_plugin,
     _yargs_ignore_plugin,
     _yargs_helpers_ignore_plugin
   ]

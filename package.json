@@ -4,7 +4,7 @@
   "description":
     "Platform-independent File System ('fs') module.",
   "version":
-    "0.0.14",
+    "0.0.15",
   "homepage":
     "https://github.com/themartiancompany/tmcfs",
   "license":
@@ -96,9 +96,9 @@
     "opfs":
       "npm:@themartiancompany/opfs@^2.0.10"
   },
-  "override": {
-    "./fs":
-      "npm:@themartiancompany/opfs@^2.0.10"
+  "overrides": {
+    "fs":
+      "node:fs"
   },
   "scripts":
     { "build":
