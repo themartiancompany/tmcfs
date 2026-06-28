@@ -4,7 +4,7 @@
   "description":
     "Platform-independent File System ('fs') module.",
   "version":
-    "0.0.15",
+    "0.0.18",
   "homepage":
     "https://github.com/themartiancompany/tmcfs",
   "license":
@@ -80,9 +80,7 @@
     "globals":
       "^17.3.0",
     "opfs":
-      "npm:@themartiancompany/opfs@^2.0.10",
-    "tmcfs":
-      "npm:@themartiancompany/fs@^0.0.13",
+      "npm:@themartiancompany/opfs@^2.0.13",
     "safely-serve":
       "^0.0.10",
     "web-worker":
@@ -96,7 +94,7 @@
   },
   "optionalDependencies": {
     "opfs":
-      "npm:@themartiancompany/opfs@^2.0.10"
+      "npm:@themartiancompany/opfs@^2.0.14"
   },
   "overrides": {
     "fs":
@@ -108,7 +106,7 @@
       "build-fs-worker":
         "npx webpack --mode 'production' --config 'fs-worker.webpack.config.cjs' --stats-error-details && for _target in 'fs'; do cp 'fs-worker.js' 'dist/'${_target}; done",
       "build-lib":
-        "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details && mkdir 'dist' && mv 'fs.js' 'dist'",
+        "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details; mv 'fs.js' 'dist/fs'",
       "lint":
         "npx eslint .",
       "start":
