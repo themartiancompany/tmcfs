@@ -98,8 +98,7 @@ module.exports = {
     alias: {
       "fs":
         _path.resolve(
-          __dirname,
-          'node_modules/fs/fs'),
+          __dirname),
       "path":
         _path.resolve(
           __dirname,
