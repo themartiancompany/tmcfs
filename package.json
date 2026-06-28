@@ -81,6 +81,8 @@
       "^17.3.0",
     "opfs":
       "npm:@themartiancompany/opfs@^2.0.10",
+    "tmcfs":
+      "npm:@themartiancompany/fs@^0.0.13",
     "safely-serve":
       "^0.0.9",
     "web-worker":

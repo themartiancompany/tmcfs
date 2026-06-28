@@ -98,7 +98,8 @@ module.exports = {
     alias: {
       "fs":
         _path.resolve(
-          __dirname),
+          __dirname,
+          'node_modules/tmcfs/fs'),
       "path":
         _path.resolve(
           __dirname,
